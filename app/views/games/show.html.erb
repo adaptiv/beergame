@@ -1,0 +1,10 @@
+<h1>Spel <%= @game.id  %></h1>
+
+<div>
+  <dl>
+    <dt>Inleverans</dt>
+    <dd><%= @current_week.delivery_from_supplier %></dd>
+    <dt>Lager</dt>
+    <dd><%= @current_week.inventory %></dd>
+  </dl>
+</div>
