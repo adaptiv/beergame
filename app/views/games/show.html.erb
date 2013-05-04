@@ -2,9 +2,13 @@
 
 <div>
   <dl>
-    <dt>Inleverans</dt>
+    <dt>Leverans från leverantören:</dt>
     <dd><%= @current_week.delivery_from_supplier %></dd>
-    <dt>Lager</dt>
+    <dt>Beställning från kunden:</dt>
+    <dd><%= @current_week.order_from_customer %></dd>
+    <dt>Leverans till kunden:</dt>
+    <dd><%= @current_week.delivery_to_customer %></dd>
+    <dt>I lager:</dt>
     <dd><%= @current_week.inventory %></dd>
   </dl>
 </div>

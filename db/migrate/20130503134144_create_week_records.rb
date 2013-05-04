@@ -6,6 +6,7 @@ class CreateWeekRecords < ActiveRecord::Migration
       t.integer :delivery_from_supplier, null: false
       t.integer :order_from_customer, null: false
       t.integer :delivery_to_customer, null: false
+      t.integer :inventory, null: false
       t.integer :order_to_supplier
       t.timestamps
     end
