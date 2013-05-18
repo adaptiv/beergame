@@ -1,5 +1,6 @@
 describe Player do
-  let(:player) { Player.create }
+  let(:game) { Game.create }
+  let(:player) { game.player }
 
   it "should create a week record when moving to the next week" do
     expect {
@@ -7,7 +8,7 @@ describe Player do
     }.to change { WeekRecord.count }.by(1)
   end
 
-  it "should deliver small orders" do
+  it "should deliver orders less than inventory" do
     expect(player.send(:send_delivery_to_customer, 11)).to eq 11
   end
 

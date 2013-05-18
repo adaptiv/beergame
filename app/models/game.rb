@@ -8,6 +8,11 @@ class Game < ActiveRecord::Base
   end
 
   def next_week
+    update_attributes(week: week+1)
+    receive_delivery_and_order
+  end
+
+  def receive_delivery_and_order
     player.receive_delivery_and_order(4, 4)
   end
 

@@ -1,14 +1,23 @@
 <h1>Spel <%= @game.id  %></h1>
+<h2>Vecka <%= @game.week  %></h2>
 
 <div>
   <dl>
     <dt>Leverans från leverantören:</dt>
-    <dd><%= @current_week.delivery_from_supplier %></dd>
+    <dd><%= @week_record.delivery_from_supplier %></dd>
     <dt>Beställning från kunden:</dt>
-    <dd><%= @current_week.order_from_customer %></dd>
+    <dd><%= @week_record.order_from_customer %></dd>
     <dt>Leverans till kunden:</dt>
-    <dd><%= @current_week.delivery_to_customer %></dd>
+    <dd><%= @week_record.delivery_to_customer %></dd>
     <dt>I lager:</dt>
-    <dd><%= @current_week.inventory %></dd>
+    <dd><%= @week_record.inventory %></dd>
   </dl>
+
+  <%= form_for @week_record do |f| %>
+      <%= f.label :order_to_supplier, "Beställning till leverantör" %>
+      <%= f.text_field :order_to_supplier %>
+      <%= f.submit "Beställ" %>
+  <% end %>
+
+
 </div>
