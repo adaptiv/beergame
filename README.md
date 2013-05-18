@@ -5,3 +5,4 @@
 3. `bundle` (För att installera dependencies)
 4. `rake db:migrate` (För att skapa sqlite databasen och skapa upp tabeller)
 5. `rails s` (Starta servern)
+6. På <http://localhost:3000/> startar man ett nytt spel
