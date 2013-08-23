@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517140540) do
+ActiveRecord::Schema.define(:version => 20130816140604) do
 
   create_table "games", :force => true do |t|
     t.datetime "created_at",                :null => false
@@ -24,18 +24,20 @@ ActiveRecord::Schema.define(:version => 20130517140540) do
     t.integer  "inventory",  :default => 12
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+    t.integer  "balance",    :default => 0
   end
 
   create_table "week_records", :force => true do |t|
-    t.integer  "player_id",              :null => false
-    t.integer  "week",                   :null => false
-    t.integer  "delivery_from_supplier", :null => false
-    t.integer  "order_from_customer",    :null => false
-    t.integer  "delivery_to_customer",   :null => false
-    t.integer  "inventory",              :null => false
+    t.integer  "player_id",                             :null => false
+    t.integer  "week",                                  :null => false
+    t.integer  "delivery_from_supplier",                :null => false
+    t.integer  "order_from_customer",                   :null => false
+    t.integer  "delivery_to_customer",                  :null => false
+    t.integer  "inventory",                             :null => false
     t.integer  "order_to_supplier"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+    t.integer  "balance",                :default => 0
   end
 
 end

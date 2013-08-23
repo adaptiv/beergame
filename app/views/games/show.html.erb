@@ -11,6 +11,8 @@
     <dd><%= @week_record.delivery_to_customer %></dd>
     <dt>I lager:</dt>
     <dd><%= @week_record.inventory %></dd>
+    <dt>Saldo:</dt>
+    <dd><%= @week_record.balance %></dd>
   </dl>
 
   <%= form_for @week_record do |f| %>
